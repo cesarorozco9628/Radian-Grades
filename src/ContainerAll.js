@@ -17,7 +17,7 @@ const Quantity = () =>{
         const value = event.target.value;
         console.log(isInput);
         let cel = 0;
-        if(isInput === 'Radianes'){
+        if(isInput === 'Radians'){
             cel = toGrades(value);
             document.getElementById('grad').value = cel;
             setInQuantity(true);
@@ -34,11 +34,10 @@ const Quantity = () =>{
     return(
         <div className='card'>
             <div className='card-body'>
-                <h1>TEMPERATURA</h1>
-                <h3>Estas conviertiendo: {inQuantity ? 'Radianes' : 'Grados'}</h3>
+                <h1 className='title'>Estas conviertiendo: {inQuantity ? 'Radianes' : 'Grados'}</h1>
                 <div className='card-input'>
                     <label>Radianes</label>
-                    <input onChange={HandlerQuality} name='Radianes' id='rad' type='number'/>
+                    <input onChange={HandlerQuality} name='Radians' id='rad' type='number'/>
                 </div>
                 <div className='card-input'>
                     <label>Grados</label>
